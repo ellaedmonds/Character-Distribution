@@ -50,12 +50,14 @@ for c in "abcdefghijklmnopqrstuvwxyz":
 print(letters)
 print(freq)
 
-order = zip([letters],[freq])
+order = list(zip(freq,letters))
 
-print(order)
+order2 = order.sort()
 
-for c in order:
-    print(order[0]*order[1])
+print(order2)
+
+for c in order2:
+    print(c[0]*c[1])
     
 
 
