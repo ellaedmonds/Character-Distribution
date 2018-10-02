@@ -49,11 +49,14 @@ for c in "abcdefghijklmnopqrstuvwxyz":
 
 print(letters)
 print(freq)
-letters2 = str(letters)
-freq2 = int(freq)
 
-for letter in letters:
-    print('{letter}'*freq2)
+order = zip([letters],[freq])
+
+print(order)
+
+for c in order:
+    print(order[0]*order[1])
+    
 
 
 
