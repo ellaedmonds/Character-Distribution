@@ -49,27 +49,27 @@ for c in "abcdefghijklmnopqrstuvwxyz":
         letters.append(c)
         freq.append(a.count(c))
 
-print(letters)
-print(freq)
+#print(letters)
+#print(freq)
 
 #order = list(zip(*sorted(zip(freq,letters))))
 
 freq1,letters1 = (list(t) for t in zip(*sorted(zip(freq, letters))))
 
-print(letters1)
-print(freq1)
+#print(letters1)
+#print(freq1)
 
 order = list((zip(freq1,letters1)))
 
-print(order)
+'''print(order)
 
 for c in order[::-1]:
-    print(c[0]*c[1])
+    print(c[0]*c[1])'''
     
 for n in range(len(order),-1,-1):
     for c in order:
         if c[0] == n:
-            print(c[1])
+            print(c[0]*c[1])
     
 
 
