@@ -36,8 +36,10 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
-a = input ('Please enter a string of text (the bigger the better):')
-print('The distribution of characters in "'+a+'" is:')
+b = input ('Please enter a string of text (the bigger the better):')
+print('The distribution of characters in "'+b+'" is:')
+
+a = b.lower()
 
 letters = []
 freq = []
@@ -64,6 +66,13 @@ print(order)
 for c in order[::-1]:
     print(c[0]*c[1])
     
+for n in range(len(order),-1,-1):
+    for c in order:
+        if c[0] == n:
+            print(c[1])
+    
+
+
 
 
 
